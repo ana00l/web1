@@ -1,18 +1,19 @@
-/* RESET */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
 
-body {
-    min-height: 200vh;
+html {
+    height: 100%;
+  }
+  
+  body {
+    margin: 0;
+    min-height: 100%;
     display: flex;
     flex-direction: column;
+    
     background: linear-gradient(to bottom, #d9e8ff, #ffffff);
-}
-
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }  
 /* NAVBAR – GLASSMORPHISM */
 nav {
     background: rgba(0, 102, 255, 0.8);
@@ -29,8 +30,8 @@ nav {
 }
 
 nav h2 {
-    color: #fff;
-    font-size: 22px;
+    color: #cbb421;
+    font-size: 24px;
     font-weight: 700;
 }
 
@@ -116,9 +117,9 @@ textarea {
     width: 100%;
     padding: 12px;
     margin-top: 10px;
-    border: 1px solid #bcd4ff;
+    border: 1px solid #090a0c;
     border-radius: 8px;
-    background: #f9fbff;
+    background: #fafafa;
     transition: 0.3s;
 }
 
@@ -130,7 +131,7 @@ textarea:focus {
 
 button {
     background: linear-gradient(90deg, #0066ff, #4da6ff);
-    color: white;
+    color: rgb(243, 79, 79);
     padding: 12px 25px;
     border: none;
     border-radius: 10px;
@@ -404,22 +405,6 @@ footer {
     /* menjaga aspek rasio tampilan */
 }
 
-nav {
-    background: rgba(0, 102, 255, 0.8);
-    padding: 15px 25px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: white;
-}
-
-nav a {
-    color: white;
-    margin-left: 20px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
 .container {
     width: 90%;
     margin: auto;
@@ -441,16 +426,70 @@ nav a {
 
 .karyawan-table th,
 .karyawan-table td {
-    border: 1px solid #ccc;
+    border: 1px solid #0f0e0e;
     padding: 12px;
     text-align: left;
 }
 
 .karyawan-table th {
     background-color: #0066ff;
-    color: white;
+    color: rgb(252, 177, 1);
 }
 
 .karyawan-table tr:nth-child(even) {
     background-color: #f0f4ff;
 }
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #006eff; /* sesuaikan warna */
+    padding: 10px 20px;
+    color: white;
+  }
+  
+  .menu-details {
+    position: relative;
+  }
+  
+  .menu-summary {
+    list-style: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+    user-select: none;
+  }
+  
+  .menu-summary::-webkit-details-marker {
+    display: none; /* hilangkan marker default di Chrome */
+  }
+  
+  .menu-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #006eff; /* warna latar menu */
+    border: 1px solid #006eff;
+    display: none;
+  }
+  
+  .menu-list li a {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .menu-list li a:hover {
+    background-color: #006eff;
+  }
+  
+  .menu-details[open] .menu-list {
+    display: block; /* tampilkan menu saat details terbuka */
+  }
+  

@@ -115,3 +115,25 @@ window.addEventListener('load', () => {
     }
   });
 });
+
+document.getElementById('linkSejarah').addEventListener('click', function(e) {
+  e.preventDefault();  // agar tidak reload halaman
+  const el = document.getElementById('sejarah');
+  el.style.display = (el.style.display === 'none' || el.style.display === '') ? 'block' : 'none';
+});
+
+document.getElementById('linkVisiMisi').addEventListener('click', function(e) {
+  e.preventDefault();
+  const el = document.getElementById('visi-misi');
+  el.style.display = (el.style.display === 'none' || el.style.display === '') ? 'block' : 'none';
+});
+
+
+const aboutToggle = document.querySelector('.about-toggle');
+const submenu = document.querySelector('.submenu');
+
+aboutToggle.addEventListener('click', function(e) {
+  e.preventDefault();
+  submenu.style.display =
+    submenu.style.display === "block" ? "none" : "block";
+});
